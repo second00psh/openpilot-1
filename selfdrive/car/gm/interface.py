@@ -94,19 +94,14 @@ class CarInterface(CarInterfaceBase):
     ret.steerRatio = 16.8
     ret.steerRatioRear = 0.
     ret.centerToFront = ret.wheelbase * 0.4 # wild guess
-    #PID tunning not to prevent oversteer
-    ret.lateralTuning.init('lqr')
+    # INDI
+    ret.lateralTuning.init('indi')
+    ret.lateralTuning.indi.innerLoopGain = 5.5
+    ret.lateralTuning.indi.outerLoopGain = 4.5
+    ret.lateralTuning.indi.timeConstant = 1.4
+    ret.lateralTuning.indi.actuatorEffectiveness = 2.4
 
-    ret.lateralTuning.lqr.scale = 1950.0
-    ret.lateralTuning.lqr.ki = 0.024
-
-    ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
-    ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
-    ret.lateralTuning.lqr.c = [1., 0.]
-    ret.lateralTuning.lqr.k = [-110., 451.]
-    ret.lateralTuning.lqr.l = [0.33, 0.318]
-    ret.lateralTuning.lqr.dcGain = 0.00225
-    tire_stiffness_factor = 0.5
+    tire_stiffness_factor = 1.0
 
 
 

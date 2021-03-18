@@ -17,13 +17,13 @@ EventName = car.CarEvent.EventName
 #  We recommend that you do not change these numbers from the defaults.
 # ******************************************************************************************
 
-_AWARENESS_TIME = 35.  # passive wheel touch total timeout
+_AWARENESS_TIME = 30000.  # passive wheel touch total timeout
 #_AWARENESS_TIME = min(int(kegman.conf['wheelTouchSeconds']), 600)    # x minutes limit without user touching steering wheels make the car enter a terminal status
-_AWARENESS_PRE_TIME_TILL_TERMINAL = 12.
-_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 6.
-_DISTRACTED_TIME = 11.
-_DISTRACTED_PRE_TIME_TILL_TERMINAL = 8.
-_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 6.
+_AWARENESS_PRE_TIME_TILL_TERMINAL = 12000.
+_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 6000.
+_DISTRACTED_TIME = 30000.
+_DISTRACTED_PRE_TIME_TILL_TERMINAL = 8000.
+_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 6000.
 
 _FACE_THRESHOLD = 0.6
 _EYE_THRESHOLD = 0.6
